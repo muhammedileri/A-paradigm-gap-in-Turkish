@@ -1,0 +1,625 @@
+---
+title: "A Paradigm Gap in Turkish (TU+6)"
+author: "Muhammed İleri"
+output:
+  html_document:
+    theme: default
+encoding: UTF-8
+editor_options: 
+  chunk_output_type: console
+---
+
+<style>
+pre {
+  overflow-x: auto;
+}
+pre code {
+  word-wrap: normal;
+  white-space: pre;
+}
+</style>
+
+---
+
+# {.tabset}
+
+## Setup
+
+```{r setup, include=FALSE, cache=FALSE}
+knitr::opts_chunk$set(cache = TRUE, fig.width = 10)
+```
+
+```{r general_options, cache=FALSE}
+library(tidyverse)
+library(brms)
+library(janitor)
+library(magrittr)
+
+# set ggplot theme
+theme_set(theme_light())
+
+# set rstan options
+options(mc.cores = parallel::detectCores())
+```
+
+## Opinion about funding stemcell research {.tabset}
+
+### Data preparation {.tabset}
+
+```{r results}
+read.pcibex <- function(filepath, auto.colnames=TRUE, fun.col=function(col,cols){cols[cols==col]<-paste(col,"Ibex",sep=".");return(cols)}) {
+  n.cols <- max(count.fields(filepath,sep=",",quote=NULL),na.rm=TRUE)
+  if (auto.colnames){
+    cols <- c()
+    con <- file(filepath, "r")
+    while ( TRUE ) {
+      line <- readLines(con, n = 1, warn=FALSE)
+      if ( length(line) == 0) {
+        break
+      }
+      m <- regmatches(line,regexec("^# (\\d+)\\. (.+)\\.$",line))[[1]]
+      if (length(m) == 3) {
+        index <- as.numeric(m[2])
+        value <- m[3]
+        if (index < length(cols)){
+          cols <- c()
+        }
+        if (is.function(fun.col)){
+          cols <- fun.col(value,cols)
+        }
+        cols[index] <- value
+        if (index == n.cols){
+          break
+        }
+      }
+    }
+    close(con)
+    return(read_csv(filepath, comment="#", col_names=cols))
+  }
+  else{
+    return(read_csv(filepath, comment="#", col_names=seq(1:n.cols)))
+  }
+}
+
+# Read in results file
+results <- read.pcibex("./materials/results.csv")
+
+# make column names R-friendly
+results <- clean_names(results)
+
+# remove private IP info of participants
+results <- results[-2]
+
+# each participant has a unique reception time, so we can easily rename that column as subject
+colnames(results)[1] <- "subject"
+```
+
+### Data Wrangling {.tabset}
+
+# Create the data set that includes only experimental items and the Likert scale (1-7) responses (value) given to them. Each participant saw 6 sentences from each of the 4 conditions. We also remove the two participants who are not native speakers of Turkish. 181 participants remaining.
+
+```{r}
+d <- results %>%
+  filter(label == "experiment-item") %>%
+  filter(value %in% c(1:7)) %>%
+  select(subject, group, turkish, value, item, condition, frequency, person_number) %>%
+  filter(turkish == "evet") %>%
+  select(-turkish)
+```
+
+# We visualized how fillers are responded in order to understand if there are some speakers who didn't respond honestly. There seems to be none.
+
+```{r}
+results$all_items <- 
+  case_when(results$item <= 3012 ~ "grammatical",
+            results$item <= 3024 ~ "ungrammatical",
+            results$item <= 3036 ~ "grammatical",
+            results$item <= 3048 ~ "ungrammatical",
+            results$item <= 5012 ~ "3PL x Frequent",
+            results$item <= 5024 ~ "3PL x Infrequent",
+            results$item <= 5036 ~ "Other x Frequent",
+            results$item <= 5048 ~ "Other x Infrequent")
+
+
+# results %>% 
+#   group_by(subject) %>%
+#   mutate(standardized = scale(as.numeric(value))) %>%
+#   group_by(all_items) %>%
+#   summarize(mean_standardized = mean(standardized, na.rm = TRUE)) %>%
+#   ggplot(aes(all_items, mean_standardized)) +
+#   geom_point()
+  
+
+results %>% 
+  filter(!(is.na(all_items))) %>%
+  filter(value %in% c(1,2,3,4,5,6,7)) %>%
+  ggplot(aes(value)) +
+  geom_histogram(stat = "count") +
+  facet_wrap(~factor(all_items))
+
+random_subjects <- sample(unique(results$subject), 2, replace = FALSE)
+
+results %>% 
+  filter(subject %in% random_subjects) %>%
+  filter(!(is.na(all_items))) %>%
+  filter(value %in% c(1,2,3,4,5,6,7)) %>%
+  ggplot(aes(value)) +
+  geom_histogram(stat = "count") +
+  facet_wrap(~factor(subject)) +
+  facet_wrap(~factor(all_items))
+
+results %>% 
+  filter(all_items %in% c("3PL x Frequent", "3PL x Infrequent")) %>%
+  group_by(subject,all_items) %>%
+  summarize(avg = mean(as.numeric(value))) %>% view()
+
+# results %>%
+#   filter(!(is.na(all_items))) %>%
+#   filter(value %in% c(1,2,3,4,5,6,7)) %>%
+#   group_by(subject, all_items) %>%
+#   summarize(avg_value = mean(as.numeric(value))) %>%
+#   ggplot(aes(all_items, avg_value)) +
+#   geom_point(aes(color = subject)) +
+#   coord_flip()
+# 
+# results %>%
+#   filter(!(is.na(all_items))) %>%
+#   filter(value %in% c(1,2,3,4,5,6,7)) %>%
+#   group_by(subject, all_items) %>%
+#   summarize(sds = sd(as.numeric(value))) %>%
+#   View()
+```
+
+
+# The distribution of responses of the removed non-native speakers of Turkish by condition.
+
+```{r}
+results %>%
+  filter(label == "experiment-item") %>%
+  filter(value %in% c(1:7)) %>%
+  select(subject, group, turkish, value, item, condition, frequency, person_number) %>%
+  filter(turkish != "evet") %>% 
+  ggplot(aes(value, fill=factor(condition))) + 
+  geom_bar(stat ="count", position = "dodge") + 
+  facet_wrap(~factor(condition))
+
+```
+
+
+# There are 2 main groups (1:4 = A; 5:8 = B). There were 48 items in total. Each group has seen the half of it such that participants in each group saw one item in only one condition. Now we will collapse 8 groups into these two main groups.
+
+```{r}
+d$group <- ifelse(d$group %in% c(1:4), "A", "B")
+```
+
+# Group A includes 90, B includes 91 subjects.  We will recode items based on their IDs. First 24 sentences numbered between 5001-5024 (inclusive) belong to the "3pl" condition of the person_number factor. The remaining 24 belong to the "other" condition of the person_number factor. First 12 items of 3pl (5001-5012) belong to "frequent" condition of the frequency factor. The remaining 12 belong to "infrequent" condition. The same logic applies to "other" condition of the person_number category. Hence, the levels of the person_number factor (3pl and other) are manipulated in the same items (within-item) while the levels of frequency are manipulated in different items (between-item). We can recode the items of 2 varying conditions of person-number to be the same with the code below such that we will have 24 items differing between 3pl and other conditions.
+
+```{r}
+d$item <- d$item - 5000
+
+d$item <- d$item %% 24
+
+d$item <- ifelse(d$item == 0, 24, d$item)
+```
+
+
+# recode subjects with sensible IDs numbered from 1 to 181.
+```{r d}
+participant_id <- c()
+item_number <- 24
+n_participant <- nrow(d)/item_number
+for (i in 1:n_participant) {
+  id <- rep(i, nrow(d)/n_participant)
+  participant_id <- c(participant_id, id)
+}
+
+d$subject <- participant_id
+```
+
+### Exploratory Data Visualisation {.tabset}
+
+Plot raw ratings by condition.
+
+```{r}
+condition_names <- c(
+                    `1` = "3pl x frequent",
+                    `2` = "3pl x infrequent",
+                    `3` = "other x frequent",
+                    `4` = "other x infrequent"
+                    )
+
+plot_raw_ratings_by_condition <- 
+  d %>%
+  ggplot(aes(x= factor(value))) + 
+  geom_histogram(stat = "count") +
+  xlab("Response") +
+  ylab("# of responses") +
+  guides(fill="none") +
+  facet_wrap(~ condition, labeller =
+               as_labeller(condition_names))
+```
+
+Plot standardized responses per condition.
+
+```{r plots}
+plot_z_score_by_subject <- 
+  d %>%
+  mutate(condition = as.factor(condition)) %>%
+  group_by(subject) %>%
+  mutate(z_scores = scale(as.numeric(value))) %>%
+  group_by(condition) %>%
+  summarize(avg_z_scores = mean(z_scores, na.rm = TRUE)) %>%
+  ggplot(aes(x = condition, y = avg_z_scores, color = condition)) + 
+  geom_point() +
+  scale_x_discrete(breaks = 1:4, labels=condition_names) +
+  scale_y_continuous(limits = c(-0.4, 0.4)) +
+  xlab("Condition") +
+  ylab("Average standardized (z-scored) response") +
+  guides(color="none")
+
+plot_z_score_by_subject
+
+#####
+plot_for_why_to_remove_2pl <- 
+  d %>%
+  mutate(condition = as.factor(condition)) %>%
+  group_by(subject) %>%
+  mutate(z_scores = scale(as.numeric(value))) %>%
+  group_by(person_number) %>%
+  summarize(avg_z_scores = mean(z_scores, na.rm = TRUE)) %>%
+  ggplot(aes(x = person_number, y = avg_z_scores)) + 
+  geom_point() +
+  xlab("Agreement Marker") +
+  ylab("Average standardized (z-scored) response") +
+  geom_hline(yintercept=0, linetype="dashed") +
+  guides(color="none")
+
+```
+
+### Ordinal brms model
+
+Brms automatically code the first level as 0 and the second level as when modeling. We are arranging the levelsfor interpreting the condition infreq X other as the intercept.
+
+```{r}
+d$frequency <- factor(d$frequency, levels = c("infreq", "freq"))
+d$person_number <- factor(ifelse(d$person_number == "3pl", "3pl", "other"), levels = c("other", "3pl"))
+```
+
+Change "value" to a numeric "response" for modeling
+
+```{r}
+d %<>% dplyr::rename(response = value)
+d$response <- as.numeric(d$response)
+```
+
+# Plots with 2pl removed
+```{r}
+item_ids_2pl <-  c(4, 12, 15, 16, 19)
+
+d_no_2pl <- d %>% filter(!(item %in% item_ids_2pl))
+
+View(d_no_2pl)
+
+condition_names <- c(
+                    `1` = "3pl x frequent",
+                    `2` = "3pl x infrequent",
+                    `3` = "other x frequent",
+                    `4` = "other x infrequent"
+                    )
+
+plot_raw_ratings_by_condition_no2pl <- 
+  d_no_2pl %>%
+  ggplot(aes(x= factor(response))) + 
+  geom_histogram(stat = "count") +
+  xlab("Rating") +
+  ylab("# of responses") +
+  guides(fill="none") +
+  facet_wrap(~ condition, labeller = as_labeller(condition_names))
+
+plot_z_score_by_subject_no2pl <- 
+  d_no_2pl %>%
+  mutate(condition = as.factor(condition),
+         response = as.numeric(response)) %>%
+  group_by(subject) %>%
+  mutate(z_scores = scale(response)) %>%
+  group_by(condition) %>%
+  summarize(avg_z_scores = mean(z_scores, na.rm = TRUE)) %>%
+  ggplot(aes(x = condition, y = avg_z_scores, color = condition)) + 
+  geom_point() +
+  scale_x_discrete(breaks = 1:4, labels=condition_names) +
+  scale_y_continuous(limits = c(-0.5, 0.5)) +
+  xlab("Condition") +
+  ylab("Average standardized response") +
+  guides(color="none")
+```
+
+Fit an Ordinal Hierarchical Bayesian model to the acceptability judgment responses. We will model the Likert-scale response as a function of agreement marking and frequency by by-subject and by-item varying intercepts and slopes. We do not model varying slopes for frequency by item since each item is assigned only one frequency condition. In other words, frequency is a within-subject and between-item factor.
+
+```{r fit_gap_sd1.5}
+# ordinal brms model
+formula <- bf(response ~ 1 + person_number*frequency + (1+person_number*frequency|subject) + (1+person_number|item))
+
+get_prior(formula = formula, data = d, family = cumulative("probit"))
+
+#normal(0, 1.5) priors 
+priors_sd1.5 <- c(prior(normal(0, 1.5), class = Intercept),
+                  prior(normal(0, 1.5), class = b),
+                  prior(normal(0, 1.5), class = sd))
+
+set.seed(5075)
+
+fit_gap_sd1.5 <- brm(
+  formula = formula,
+  data = d,
+  family = cumulative("probit"),
+  chains = 4,
+  prior = priors_sd1.5,
+  sample_prior = T,
+  iter = 4000,
+  inits = 0,
+  file = "./fit_gap_sd1.5.v2")
+
+summary(fit_gap_sd1.5)
+
+```
+
+We have also modeled the response by a category specific model to use if the effects change based on the response category. This model takes into account different effects per category. For example, it might be the case that giving a 7 response changes by condition more than giving a 3 response.
+
+```{r category-specific model}
+set.seed(5075)
+# ordinal brms model
+formula_cs <- bf(response ~ 1 + cs(person_number) + frequency + person_number:frequency + (1+person_number*frequency|subject) + (1+person_number|item))
+
+get_prior(formula = formula_cs, data = d, family = acat("logit"))
+
+#normal(0, 1.5) priors 
+priors_cs <- c(prior(normal(0, 1.5), class = Intercept),
+               prior(normal(0, 1.5), class = b),
+               prior(normal(0, 1.5), class = sd))
+
+fit_gap_cs <- brm(
+  formula = formula_cs,
+  data = d,
+  family = acat("logit"),
+  chains = 4,
+  prior = priors_cs,
+  sample_prior = T,
+  iter = 4000,
+  inits = 0,
+  file = "./fit_gap_cs")
+
+summary(fit_gap_cs)
+
+```
+
+
+```{r fit_gap_sd3}
+#normal(0, 3) priors
+priors_sd3 <- c(prior(normal(0, 3), class = Intercept),
+                prior(normal(0, 3), class = b),
+                prior(normal(0, 3), class = sd))
+
+fit_gap_sd3 <- brm(
+  formula = formula,
+  data = d,
+  family = cumulative("probit"),
+  chains = 4,
+  prior = priors_sd3,
+  sample_prior = T,
+  iter = 4000,
+  inits = 0,
+  file = "./fit_gap_sd3")
+
+summary(fit_gap_sd3)
+
+#overview of model parameters:
+variables(fit_gap_sd3)
+
+#Sample the parameters of interest:
+Posterior_sd3 <- as_draws_df(fit_gap_sd3)
+
+#Plot the prior-posterior update for 3pl effect (population):
+ggplot(Posterior_sd3) +
+  geom_density(aes(prior_b), fill="steelblue", color="black",alpha=0.6) +
+  geom_density(aes(b_person_number3pl), fill="#FC4E07", color="black",alpha=0.6) +
+  ggtitle("Prior-Posterior update of the slope of 3pl on acceptability") +
+  geom_vline(xintercept = -0.78, linetype="dashed", color = "blue", size = 0.6)
+
+#Plot the prior-posterior update for frequency effect (population):
+ggplot(Posterior_sd3) +
+  geom_density(aes(prior_b), fill="steelblue", color="black",alpha=0.6) +
+  geom_density(aes(b_frequencyfreq), fill="#FC4E07", color="black",alpha=0.6) +
+  ggtitle("Prior-Posterior update of the slope of frequency on acceptability") +
+  geom_vline(xintercept = 0.21, linetype="dashed", color = "blue", size = 0.6)
+
+#Plot the prior-posterior update plot for sd by person:
+#sd of Intercept (acceptability of infrequent other person_number desiderative sentences)
+ggplot(Posterior_sd3) +
+  geom_density(aes(prior_sd_subject), fill="steelblue", color="black",alpha=0.6) +
+  geom_density(aes(sd_subject__Intercept), fill="#FC4E07", color="black",alpha=0.6) +
+  xlim(c(-1, 12))
+
+#sd of 3pl effect
+ggplot(Posterior_sd3) +
+  geom_density(aes(prior_sd_subject), fill="steelblue", color="black",alpha=0.6) +
+  geom_density(aes(sd_subject__person_number3pl), fill="#FC4E07", color="black",alpha=0.6) +
+  xlim(c(-1, 12)) 
+  
+
+#sd of frequency effect
+ggplot(Posterior_sd3) +
+  geom_density(aes(prior_sd_subject), fill="steelblue", color="black",alpha=0.6) +
+  geom_density(aes(sd_subject__frequencyfreq), fill="#FC4E07", color="black",alpha=0.6) +
+  xlim(c(-1, 12))
+
+#Plot the prior-posterior update plot for sd by item:
+
+#sd of Intercept
+ggplot(Posterior_sd3) +
+  geom_density(aes(prior_sd_item), fill="steelblue", color="black",alpha=0.6) +
+  geom_density(aes(sd_item__Intercept), fill="#FC4E07", color="black",alpha=0.6) +
+  xlim(c(-1, 12))
+
+#sd of 3pl effect
+ggplot(Posterior_sd3) +
+  geom_density(aes(prior_sd_item), fill="steelblue", color="black",alpha=0.6) +
+  geom_density(aes(sd_item__person_number3pl), fill="#FC4E07", color="black",alpha=0.6) +
+  xlim(c(-1, 12))
+
+#Posterior predictive check to see the fit
+pp_check(fit_gap_sd3, ndraws = 1000, type = "bars")
+
+#Conditional effects plots
+conditions_frequency <- data.frame(frequency = c("infreq", "freq"))
+
+conditional_effects(fit_gap_sd3, effects = "person_number", conditions = conditions_frequency, categorical = TRUE)
+
+conditions_person_number <- data.frame(person_number = c("other", "3pl"))
+
+conditional_effects(fit_gap_sd3, effects = "frequency", conditions = conditions_person_number, categorical = TRUE)
+```
+
+```{r 2pl out}
+item_ids_2pl <-  c(4, 12, 15, 16, 19)
+
+d_no_2pl <- d %>% filter(!(item %in% item_ids_2pl))
+
+View(d_no_2pl)
+
+# ordinal brms model
+formula <- bf(response ~ 1 + person_number*frequency + (1+person_number*frequency|subject) + (1+person_number|item))
+
+get_prior(formula = formula, data = d_no_2pl, family = cumulative("probit"))
+
+#normal(0, 1.5) priors 
+priors_sd1.5 <- c(prior(normal(0, 1.5), class = Intercept),
+                  prior(normal(0, 1.5), class = b),
+                  prior(normal(0, 1.5), class = sd))
+
+set.seed(5075)
+
+fit_no_2pl <- brm(
+  formula = formula,
+  data = d_no_2pl,
+  family = cumulative("probit"),
+  chains = 4,
+  prior = priors_sd1.5,
+  sample_prior = T,
+  iter = 4000,
+  inits = 0,
+  file = "./models/paradigm_gap_fit")
+
+summary(fit_no_2pl)
+
+#overview of model parameters:
+variables(fit_no_2pl)
+
+#Sample the parameters of interest:
+posterior <- as_draws_df(fit_no_2pl)
+
+#Plot the prior-posterior update for 3pl effect (population):
+ggplot(posterior) +
+  geom_density(aes(prior_b), fill="steelblue", color="black",alpha=0.6) +
+  geom_density(aes(b_person_number3pl), fill="#FC4E07", color="black",alpha=0.6) +
+  ggtitle("Prior-Posterior update of the slope of 3pl on acceptability") +
+  geom_vline(xintercept = -0.78, linetype="dashed", color = "blue", size = 0.6)
+
+#Plot the prior-posterior update for frequency effect (population):
+ggplot(posterior) +
+  geom_density(aes(prior_b), fill="steelblue", color="black",alpha=0.6) +
+  geom_density(aes(b_frequencyfreq), fill="#FC4E07", color="black",alpha=0.6) +
+  ggtitle("Prior-Posterior update of the slope of frequency on acceptability") +
+  geom_vline(xintercept = 0.21, linetype="dashed", color = "blue", size = 0.6)
+
+#Plot the prior-posterior update plot for sd by person:
+#sd of Intercept
+ggplot(posterior) +
+  geom_density(aes(prior_sd_subject), fill="steelblue", color="black",alpha=0.6) +
+  geom_density(aes(sd_subject__Intercept), fill="#FC4E07", color="black",alpha=0.6) +
+  xlim(c(-1, 6))
+
+#sd of 3pl effect
+ggplot(posterior) +
+  geom_density(aes(prior_sd_subject), fill="steelblue", color="black",alpha=0.6) +
+  geom_density(aes(sd_subject__person_number3pl), fill="#FC4E07", color="black",alpha=0.6) +
+  xlim(c(-1, 6)) +
+  ggtitle("Prior-Posterior Update of the by-subject standard deviation of 3PL slope")
+
+#sd of frequency effect
+ggplot(posterior) +
+  geom_density(aes(prior_sd_subject), fill="steelblue", color="black",alpha=0.6) +
+  geom_density(aes(sd_subject__frequencyfreq), fill="#FC4E07", color="black",alpha=0.6) +
+  xlim(c(-1, 6)) +
+  ggtitle("Prior-Posterior Update of the by-subject standard deviation of frequency slope")
+
+#Plot the prior-posterior update plot for sd by item:
+
+#sd of Intercept
+ggplot(posterior) +
+  geom_density(aes(prior_sd_item), fill="steelblue", color="black",alpha=0.6) +
+  geom_density(aes(sd_item__Intercept), fill="#FC4E07", color="black",alpha=0.6) +
+  xlim(c(-1, 6)) +
+  ggtitle("Prior-Posterior Update of the by-item standard deviation of the Intercept")
+
+
+#sd of 3pl effect
+ggplot(posterior) +
+  geom_density(aes(prior_sd_item), fill="steelblue", color="black",alpha=0.6) +
+  geom_density(aes(sd_item__person_number3pl), fill="#FC4E07", color="black",alpha=0.6) +
+  xlim(c(-1, 6)) +
+  ggtitle("Prior-Posterior Update of the by-item standard deviation of 3PL slope")
+
+
+#Posterior predictive check to see the fit
+pp_check(fit_no_2pl, ndraws = 1000, type = "bars")
+
+#Conditional effects plots
+conditions_frequency <- data.frame(frequency = c("infreq", "freq"))
+
+person_number_effect <- conditional_effects(fit_no_2pl, effects = "person_number", conditions = conditions_frequency, categorical = TRUE)
+```
+
+
+
+```{r wrong freq & 2pl out}
+item_ids_2pl <-  c(4, 12, 15, 16, 19)
+wrong_item_freq <- c(7, 21, 22, 24)
+discarded_items <- c(item_ids_2pl, wrong_item_freq)
+
+d_no_2pl_wrong_freq <- d %>% filter(!(item %in% discarded_items))
+View(d_no_2pl_wrong_freq)
+
+# ordinal brms model
+formula <- bf(response ~ 1 + person_number*frequency + (1+person_number*frequency|subject) + (1+person_number|item))
+
+get_prior(formula = formula, data = d_no_2pl_wrong_freq, family = cumulative("probit"))
+
+#normal(0, 1.5) priors 
+priors_sd1.5 <- c(prior(normal(0, 1.5), class = Intercept),
+                  prior(normal(0, 1.5), class = b),
+                  prior(normal(0, 1.5), class = sd))
+
+set.seed(5075)
+
+fit_gap_no_2pl <- brm(
+  formula = formula,
+  data = d_no_2pl_wrong_freq,
+  family = cumulative("probit"),
+  chains = 4,
+  prior = priors_sd1.5,
+  sample_prior = T,
+  iter = 4000,
+  inits = 0,
+  file = "./fit_gap_no_2pl_wr_freq_4000")
+
+summary(fit_gap_no_2pl)
+
+#Conditional effects plots
+conditions_frequency <- data.frame(frequency = c("infreq", "freq"))
+
+plot_person_number_effect <- conditional_effects(fit_gap_no_2pl, effects = "person_number", conditions = conditions_frequency, categorical = TRUE)
+
+conditions_person_number <- data.frame(person_number = c("other", "3pl"))
+
+plot_frequency_effect <- conditional_effects(fit_gap_no_2pl, effects = "frequency", conditions = conditions_person_number, categorical = TRUE)
+```
