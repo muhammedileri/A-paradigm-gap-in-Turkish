@@ -1,0 +1,577 @@
+ITEM,CONDITION,FREQUENCY,PERSON_NUMBER,SENTENCE,GROUP,TYPE
+5017,2,infreq,3pl,Bugün ufaklığı şımartasıları varmış.,1,item
+3004,.,.,.,Bana makarna pişireceğine söz vermiştin.,1,filler
+3035,.,.,.,Yarın mahkemeye çıkarılacakmışsınız.,1,filler
+5048,4,infreq,2sg,Görüşmede arabulucuyla uzlaşasın yokmuş.,1,item
+3026,.,.,.,Yarın akşam ailecek film izleyeceğiz.,1,filler
+5015,2,infreq,3pl,Yarın sabah halı silkeleyesileri varmış.,1,item
+3015,.,.,.,Kutuyu satması çok zahmetli olmakta değil.,1,filler
+5034,3,freq,1sg,Yarın akşam antremana başlayasım yok.,1,item
+3020,.,.,.,Sinema etkinliğine sıkıcılaştırmamızda ısrarcısınız.,1,filler
+3001,.,.,.,Anneni özlediğini bilmiyordum.,1,filler
+5038,4,infreq,3sg,Krizde vatandaşı kazıklayası varmış.,1,item
+3045,.,.,.,Benle arkadaşlarım hafta sonu takıldım.,1,filler
+3027,.,.,.,Genellikle yemekten sonra mutfağı toplarım.,1,filler
+5042,4,infreq,1pl,Programda seyirciyi coşturasımız vardı.,1,item
+3008,.,.,.,Nişanlısıyla tanışmayı siz de çok istiyormuşsunuz.,1,filler
+3042,.,.,.,Perşembe pazarındaki elmaları çürüdük.,1,filler
+5021,2,infreq,3pl,Pazarda satıcıyı oyalayasıları yokmuş.,1,item
+3005,.,.,.,Şiir okuyuşuna hayran kaldım.,1,filler
+5036,3,freq,2pl,Ekranda gerçeği söyleyesiniz yokmuş.,1,item
+3009,.,.,.,Suçsuz olduğunuzu kanıtlamaya çalışıyorduk.,1,filler
+3019,.,.,.,Dün gece herkesle selam verdiğimi tespitliyormuşsunuz.,1,filler
+5019,2,infreq,3pl,Dün akşam ayakkabı boyatasıları yokmuş.,1,item
+3025,.,.,.,Motorlar olay yerinden hızla uzaklaştı.,1,filler
+3022,.,.,.,Şu deveyi omuzlayabileceğini düşünmüştüktü.,1,filler
+5040,4,infreq,2pl,Mahkemede katille yüzleşesiniz varmış.,1,item
+3028,.,.,.,Evin duvarlarını tablolarla süsleyin.,1,filler
+3002,.,.,.,Metroya binmekten çok yoruldular.,1,filler
+5028,3,freq,2pl,Yarın akşam zanlıyı göresiniz varmış.,1,item
+3040,.,.,.,Sabahleyin yeri düşmüşsün galiba.,1,filler
+3024,.,.,.,Koltuklar tepelerinde oturduğunu ezberledik.,1,filler
+5001,1,freq,3pl,Partide tatlı yiyesileri varmış.,1,item
+3034,.,.,.,Yönetmenler oyuncuları birbirine benzetmişlerdi.,1,filler
+3044,.,.,.,Biz sizinle geceleri mekanlarda çıldırıyorsunuz.,1,filler
+3017,.,.,.,Senden hoşlandığımız duyulduk.,1,filler
+3010,.,.,.,Bu projeyi hayata geçirdiğimizi duymuşsunuz.,1,filler
+3037,.,.,.,Kediler koşarak çöpe saklandık.,1,filler
+5044,4,infreq,1sg,Okulda hocayla dertleşesim yok.,1,item
+3032,.,.,.,Sırtınızı devlete dayamışsınız.,1,filler
+5007,1,freq,3pl,Bu sabah müşteriyi arayasıları yokmuş.,1,item
+3011,.,.,.,Yılbaşı için tavuğu haşlamana şaşırdık.,1,filler
+5032,3,freq,2sg,Müsabakada taraftara bakasın yokmuş.,1,item
+3043,.,.,.,Yazınki tatil planım bozuyorlar.,1,filler
+5023,2,infreq,3pl,Yarışmada ödülü bölüşesileri yokmuş.,1,item
+3021,.,.,.,Yarın en parlak dimağlar göç etmeyi kararlaştırmışlar.,1,filler
+3036,.,.,.,Dün akşam evde fasulye ayıkladım.,1,filler
+5030,3,freq,1pl,Hafta sonu barınağa gidesimiz var.,1,item
+3013,.,.,.,Dersaneye yazıldığımıza kimseye bahsetme.,1,filler
+3006,.,.,.,Ders çalışmam herkesi hayrete düşürdü.,1,filler
+3007,.,.,.,Kedinin kumunu temizlerken yere dökmüşsün.,1,filler
+3031,.,.,.,Sen her zaman başarılı oldun.,1,filler
+5013,2,infreq,3pl,Yayında kaydı dinletesileri varmış.,1,item
+3003,.,.,.,Senin onu sevdiğini anlamışlar.,1,filler
+3038,.,.,.,Yarın aylaklık yüzünden kalemler aradım.,1,filler
+3023,.,.,.,Yarın bütün onurunu ayaklar altında ezmekteyim.,1,filler
+5011,1,freq,3pl,Bu yaşta sokakta kalasıları yokmuş.,1,item
+3033,.,.,.,Bu cinayetin failini bulmuşlar.,1,filler
+3029,.,.,.,Her hafta en az bir kitap bitirirdik.,1,filler
+5009,1,freq,3pl,Yazın sınava giresileri yokmuş.,1,item
+3016,.,.,.,Ceplerimizden fırladığını kıskanıyor ve heyecanlandırdım.,1,filler
+5026,3,freq,2sg,Bu akşam ödevi yapasın varmış.,1,item
+3014,.,.,.,Yarın işi bırakacağından mutsuzlarmıştı.,1,filler
+3041,.,.,.,Bu akşam memleketten sel basmış.,1,filler
+3018,.,.,.,Kendimi büyük sanıyormuşsun.,1,filler
+3047,.,.,.,Seyir halindeyken şarkı dinlemişsindi.,1,filler
+5046,4,infreq,3sg,Gece kule gözetleyesi yokmuş.,1,item
+3048,.,.,.,Akşamki rüzgar korkunç şekilde binayı esti.,1,filler
+3046,.,.,.,Seneye bir köye inzivaya çekilmişsin.,1,filler
+5005,1,freq,3pl,Hastanede merdivenden çıkasıları varmış.,1,item
+3039,.,.,.,Çorbacı yerleri siliyorlar.,1,filler
+3012,.,.,.,Benim için bu kadar çabalaması beni sevdiğini gösteriyor.,1,filler
+3030,.,.,.,Bu arabanın yakıtı çok ekonomik.,1,filler
+5003,1,freq,3pl,Haftaya bisiklet alasıları varmış.,1,item
+5003,1,freq,3pl,Haftaya bisiklet alasıları varmış.,2,item
+3030,.,.,.,Bu arabanın yakıtı çok ekonomik.,2,filler
+3012,.,.,.,Benim için bu kadar çabalaması beni sevdiğini gösteriyor..,2,filler
+3039,.,.,.,Çorbacı yerleri siliyorlar.,2,filler
+5005,1,freq,3pl,Hastanede merdivenden çıkasıları varmış.,2,item
+3046,.,.,.,Seneye bir köye inzivaya çekilmişsin.,2,filler
+3048,.,.,.,Akşamki rüzgar korkunç şekilde binayı esti.,2,filler
+5046,4,infreq,3sg,Gece kule gözetleyesi yokmuş.,2,item
+3047,.,.,.,Seyir halindeyken şarkı dinlemişsindi.,2,filler
+3018,.,.,.,Kendimi büyük sanıyormuşsun.,2,filler
+3041,.,.,.,Bu akşam memleketten sel basmış.,2,filler
+3014,.,.,.,Yarın işi bırakacağından mutsuzlarmıştı.,2,filler
+5026,3,freq,2sg,Bu akşam ödevi yapasın varmış.,2,item
+3016,.,.,.,Ceplerimizden fırladığını kıskanıyor ve heyecanlandırdım.,2,filler
+5009,1,freq,3pl,Yazın sınava giresileri yokmuş.,2,item
+3029,.,.,.,Her hafta en az bir kitap bitirirdik.,2,filler
+3033,.,.,.,Bu cinayetin failini bulmuşlar.,2,filler
+5011,1,freq,3pl,Bu yaşta sokakta kalasıları yokmuş.,2,item
+3023,.,.,.,Yarın bütün onurunu ayaklar altında ezmekteyim.,2,filler
+3038,.,.,.,Yarın aylaklık yüzünden kalemler aradım.,2,filler
+3003,.,.,.,Senin onu sevdiğini anlamışlar.,2,filler
+5013,2,infreq,3pl,Yayında kaydı dinletesileri varmış.,2,item
+3031,.,.,.,Sen her zaman başarılı oldun.,2,filler
+3007,.,.,.,Kedinin kumunu temizlerken yere dökmüşsün.,2,filler
+3006,.,.,.,Ders çalışmam herkesi hayrete düşürdü.,2,filler
+3013,.,.,.,Dersaneye yazıldığımıza kimseye bahsetme.,2,filler
+5030,3,freq,1pl,Hafta sonu barınağa gidesimiz var.,2,item
+3036,.,.,.,Dün akşam evde fasulye ayıkladım.,2,filler
+3021,.,.,.,Yarın en parlak dimağlar göç etmeyi kararlaştırmışlar.,2,filler
+5023,2,infreq,3pl,Yarışmada ödülübölüşesileri yokmuş.,2,item
+3043,.,.,.,Yazınki tatil planım bozuyorlar.,2,filler
+5032,3,freq,2sg,Müsabakada taraftara bakasın yokmuş.,2,item
+3011,.,.,.,Yılbaşı için tavuğu haşlamana şaşırdık.,2,filler
+5007,1,freq,3pl,Bu sabah müşteriyi arayasıları yokmuş.,2,item
+3032,.,.,.,Sırtınızı devlete dayamışsınız.,2,filler
+5044,4,infreq,1sg,Okulda hocayla dertleşesim yok.,2,item
+3037,.,.,.,Kediler koşarak çöpe saklandık.,2,filler
+3010,.,.,.,Bu projeyi hayata geçirdiğimizi duymuşsunuz.,2,filler
+3017,.,.,.,Senden hoşlandığımız duyulduk.,2,filler
+3044,.,.,.,Biz sizinle geceleri mekanlarda çıldırıyorsunuz.,2,filler
+3034,.,.,.,Yönetmenler oyuncuları birbirine benzetmişlerdi.,2,filler
+5001,1,freq,3pl,Partide tatlı yiyesileri varmış.,2,item
+3024,.,.,.,Koltuklar tepelerinde oturduğunu ezberledik.,2,filler
+3040,.,.,.,Sabahleyin yeri düşmüşsün galiba.,2,filler
+5028,3,freq,2pl,Yarın akşam zanlıyı göresiniz varmış.,2,item
+3002,.,.,.,Metroya binmekten çok yoruldular.,2,filler
+3028,.,.,.,Evin duvarlarını tablolarla süsleyin.,2,filler
+5040,4,infreq,2pl,Mahkemede katille yüzleşesiniz varmış.,2,item
+3022,.,.,.,Şu deveyi omuzlayabileceğini düşünmüştüktü.,2,filler
+3025,.,.,.,Motorlar olay yerinden hızla uzaklaştı.,2,filler
+5019,2,infreq,3pl,Dün akşam ayakkabı boyatasıları yokmuş.,2,item
+3019,.,.,.,Dün gece herkesle selam verdiğimi tespitliyormuşsunuz.,2,filler
+3009,.,.,.,Suçsuz olduğunuzu kanıtlamaya çalışıyorduk.,2,filler
+5036,3,freq,2pl,Ekranda gerçeği söyleyesiniz yokmuş.,2,item
+3005,.,.,.,Şiir okuyuşuna hayran kaldım.,2,filler
+5021,2,infreq,3pl,Pazarda satıcıyı oyalayasıları yokmuş.,2,item
+3042,.,.,.,Perşembe pazarındaki elmaları çürüdük.,2,filler
+3008,.,.,.,Nişanlısıyla tanışmayı siz de çok istiyormuşsunuz.,2,filler
+5042,4,infreq,1pl,Programda seyirciyi coşturasımız vardı.,2,item
+3027,.,.,.,Genellikle yemekten sonra mutfağı toplarım.,2,filler
+3045,.,.,.,Benle arkadaşlarım hafta sonu takıldım.,2,filler
+5038,4,infreq,3sg,Krizde vatandaşı kazıklayası varmış.,2,item
+3001,.,.,.,Anneni özlediğini bilmiyordum.,2,filler
+3020,.,.,.,Sinema etkinliğine sıkıcılaştırmamızda ısrarcısınız.,2,filler
+5034,3,freq,1sg,Yarın akşam antremana başlayasım yok.,2,item
+3015,.,.,.,Kutuyu satması çok zahmetli olmakta değil.,2,filler
+5015,2,infreq,3pl,Yarın sabah halı silkeleyesileri varmış.,2,item
+3026,.,.,.,Yarın akşam ailecek film izleyeceğiz.,2,filler
+5048,4,infreq,2sg,Görüşmede arabulucuyla uzlaşasın yokmuş.,2,item
+3035,.,.,.,Yarın mahkemeye çıkarılacakmışsınız.,2,filler
+3004,.,.,.,Bana makarna pişireceğine söz vermiştin.,2,filler
+5017,2,infreq,3pl,Bugün ufaklığı şımartasıları varmış.,2,item
+5044,4,infreq,1sg,Okulda hocayla dertleşesim yok.,3,item
+3032,.,.,.,Sırtınızı devlete dayamışsınız.,3,filler
+5007,1,freq,3pl,Bu sabah müşteriyi arayasıları yokmuş.,3,item
+3011,.,.,.,Yılbaşı için tavuğu haşlamana şaşırdık.,3,filler
+5032,3,freq,2sg,Müsabakada taraftara bakasın yokmuş.,3,item
+3043,.,.,.,Yazınki tatil planım bozuyorlar.,3,filler
+5023,2,infreq,3pl,Yarışmada ödülü bölüşesileri yokmuş.,3,item
+3021,.,.,.,Yarın en parlak dimağlar göç etmeyi kararlaştırmışlar.,3,filler
+3036,.,.,.,Dün akşam evde fasulye ayıkladım.,3,filler
+5030,3,freq,1pl,Hafta sonu barınağa gidesimiz var.,3,item
+3013,.,.,.,Dersaneye yazıldığımıza kimseye bahsetme.,3,filler
+3006,.,.,.,Ders çalışmam herkesi hayrete düşürdü.,3,filler
+3007,.,.,.,Kedinin kumunu temizlerken yere dökmüşsün.,3,filler
+3031,.,.,.,Sen her zaman başarılı oldun.,3,filler
+5013,2,infreq,3pl,Yayında kaydı dinletesileri varmış.,3,item
+3003,.,.,.,Senin onu sevdiğini anlamışlar.,3,filler
+3038,.,.,.,Yarın aylaklık yüzünden kalemler aradım.,3,filler
+3023,.,.,.,Yarın bütün onurunu ayaklar altında ezmekteyim.,3,filler
+5011,1,freq,3pl,Bu yaşta sokakta kalasıları yokmuş.,3,item
+3033,.,.,.,Bu cinayetin failini bulmuşlar.,3,filler
+3029,.,.,.,Her hafta en az bir kitap bitirirdik.,3,filler
+5009,1,freq,3pl,Yazın sınava giresileri yokmuş.,3,item
+3016,.,.,.,Ceplerimizden fırladığını kıskanıyor ve heyecanlandırdım.,3,filler
+5026,3,freq,2sg,Bu akşam ödevi yapasın varmış.,3,item
+3014,.,.,.,Yarın işi bırakacağından mutsuzlarmıştı.,3,filler
+3041,.,.,.,Bu akşam memleketten sel basmış.,3,filler
+3018,.,.,.,Kendimi büyük sanıyormuşsun.,3,filler
+3047,.,.,.,Seyir halindeyken şarkı dinlemişsindi.,3,filler
+5046,4,infreq,3sg,Gece kule gözetleyesi yokmuş.,3,item
+3048,.,.,.,Akşamki rüzgar korkunç şekilde binayı esti.,3,filler
+3046,.,.,.,Seneye bir köye inzivaya çekilmişsin.,3,filler
+5005,1,freq,3pl,Hastanede merdivenden çıkasıları varmış.,3,item
+3039,.,.,.,Çorbacı yerleri siliyorlar.,3,filler
+3012,.,.,.,Benim için bu kadar çabalaması beni sevdiğini gösteriyor.,3,filler
+3030,.,.,.,Bu arabanın yakıtı çok ekonomik.,3,filler
+3010,.,.,.,Bu projeyi hayata geçirdiğimizi duymuşsunuz.,3,filler
+5017,2,infreq,3pl,Bugün	ufaklığı	şımartasıları	varmış.,3,item
+3004,.,.,.,Bana makarna pişireceğine söz vermiştin.,3,filler
+3035,.,.,.,Yarın mahkemeye çıkarılacakmışsınız.,3,filler
+5048,4,infreq,2sg,Görüşmede arabulucuyla uzlaşasın yokmuş.,3,item
+3026,.,.,.,Yarın akşam ailecek film izleyeceğiz.,3,filler
+5015,2,infreq,3pl,Yarın sabah halı silkeleyesileri varmış.,3,item
+3015,.,.,.,Kutuyu satması çok zahmetli olmakta değil.,3,filler
+5034,3,freq,1sg,Yarın akşam antremana başlayasım yok.,3,item
+3020,.,.,.,Sinema etkinliğine sıkıcılaştırmamızda ısrarcısınız.,3,filler
+3001,.,.,.,Anneni özlediğini bilmiyordum.,3,filler
+5038,4,infreq,3sg,Krizde vatandaşı kazıklayası varmış.,3,item
+3045,.,.,.,Benle arkadaşlarım hafta sonu takıldım.,3,filler
+3027,.,.,.,Genellikle yemekten sonra mutfağı toplarım.,3,filler
+5042,4,infreq,1pl,Programda seyirciyi coşturasımız vardı.,3,item
+3008,.,.,.,Nişanlısıyla tanışmayı siz de çok istiyormuşsunuz.,3,filler
+3042,.,.,.,Perşembe pazarındaki elmaları çürüdük.,3,filler
+5021,2,infreq,3pl,Pazarda satıcıyı oyalayasıları yokmuş.,3,item
+3005,.,.,.,Şiir okuyuşuna hayran kaldım.,3,filler
+5036,3,freq,2pl,Ekranda gerçeği söyleyesiniz yokmuş.,3,item
+3009,.,.,.,Suçsuz olduğunuzu kanıtlamaya çalışıyorduk.,3,filler
+3019,.,.,.,Dün gece herkesle selam verdiğimi tespitliyormuşsunuz.,3,filler
+5019,2,infreq,3pl,Dün akşam ayakkabı boyatasıları yokmuş.,3,item
+3025,.,.,.,Motorlar olay yerinden hızla uzaklaştı.,3,filler
+3022,.,.,.,Şu deveyi omuzlayabileceğini düşünmüştüktü.,3,filler
+5040,4,infreq,2pl,Mahkemede katille yüzleşesiniz varmış.,3,item
+3028,.,.,.,Evin duvarlarını tablolarla süsleyin.,3,filler
+3002,.,.,.,Metroya binmekten çok yoruldular.,3,filler
+5028,3,freq,2pl,Yarın akşam zanlıyı göresiniz varmış.,3,item
+3040,.,.,.,Sabahleyin yeri düşmüşsün galiba.,3,filler
+3024,.,.,.,Koltuklar tepelerinde oturduğunu ezberledik.,3,filler
+5001,1,freq,3pl,Partide tatlı yiyesileri varmış.,3,item
+3034,.,.,.,Yönetmenler oyuncuları birbirine benzetmişlerdi.,3,filler
+3044,.,.,.,Biz sizinle geceleri mekanlarda çıldırıyorsunuz.,3,filler
+3017,.,.,.,Senden hoşlandığımız duyulduk.,3,filler
+3010,.,.,.,Bu projeyi hayata geçirdiğimizi duymuşsunuz.,3,filler
+5003,1,freq,3pl,Haftaya bisiklet alasıları varmış.,3,item
+3037,.,.,.,Kediler koşarak çöpe saklandık.,4,filler
+3010,.,.,.,Bu projeyi hayata geçirdiğimizi duymuşsunuz.,4,filler
+3017,.,.,.,Senden hoşlandığımız duyulduk.,4,filler
+3044,.,.,.,Biz sizinle geceleri mekanlarda çıldırıyorsunuz.,4,filler
+3034,.,.,.,Yönetmenler oyuncuları birbirine benzetmişlerdi.,4,filler
+5001,1,freq,3pl,Partide tatlı yiyesileri varmış.,4,item
+3024,.,.,.,Koltuklar tepelerinde oturduğunu ezberledik.,4,filler
+3040,.,.,.,Sabahleyin yeri düşmüşsün galiba.,4,filler
+5028,3,freq,2pl,Yarın akşam zanlıyı göresiniz varmış.,4,item
+3002,.,.,.,Metroya binmekten çok yoruldular.,4,filler
+3028,.,.,.,Evin duvarlarını tablolarla süsleyin.,4,filler
+5040,4,infreq,2pl,Mahkemede katille yüzleşesiniz varmış.,4,item
+3022,.,.,.,Şu deveyi omuzlayabileceğini düşünmüştüktü.,4,filler
+3025,.,.,.,Motorlar olay yerinden hızla uzaklaştı.,4,filler
+5019,2,infreq,3pl,Dün akşam ayakkabı boyatasıları yokmuş.,4,item
+3019,.,.,.,Dün gece herkesle selam verdiğimi tespitliyormuşsunuz.,4,filler
+3009,.,.,.,Suçsuz olduğunuzu kanıtlamaya çalışıyorduk.,4,filler
+5036,3,freq,2pl,Ekranda gerçeği söyleyesiniz yokmuş.,4,item
+3005,.,.,.,Şiir okuyuşuna hayran kaldım.,4,filler
+5021,2,infreq,3pl,Pazarda satıcıyı oyalayasıları yokmuş.,4,item
+3042,.,.,.,Perşembe pazarındaki elmaları çürüdük.,4,filler
+3008,.,.,.,Nişanlısıyla tanışmayı siz de çok istiyormuşsunuz.,4,filler
+5042,4,infreq,1pl,Programda seyirciyi coşturasımız vardı.,4,item
+3027,.,.,.,Genellikle yemekten sonra mutfağı toplarım.,4,filler
+3045,.,.,.,Benle arkadaşlarım hafta sonu takıldım.,4,filler
+5038,4,infreq,3sg,Krizde vatandaşı kazıklayası varmış.,4,item
+3001,.,.,.,Anneni özlediğini bilmiyordum.,4,filler
+3020,.,.,.,Sinema etkinliğine sıkıcılaştırmamızda ısrarcısınız.,4,filler
+5034,3,freq,1sg,Yarın akşam antremana başlayasım yok.,4,item
+3015,.,.,.,Kutuyu satması çok zahmetli olmakta değil.,4,filler
+5015,2,infreq,3pl,Yarın sabah halı silkeleyesileri varmış.,4,item
+3026,.,.,.,Yarın akşam ailecek film izleyeceğiz.,4,filler
+5048,4,infreq,2sg,Görüşmede arabulucuyla uzlaşasın yokmuş.,4,item
+3035,.,.,.,Yarın mahkemeye çıkarılacakmışsınız.,4,filler
+3004,.,.,.,Bana makarna pişireceğine söz vermiştin.,4,filler
+3006,.,.,.,Ders çalışmam herkesi hayrete düşürdü.,4,filler
+5003,1,freq,3pl,Haftaya bisiklet alasıları varmış.,4,item
+3030,.,.,.,Bu arabanın yakıtı çok ekonomik.,4,filler
+3012,.,.,.,Benim için bu kadar çabalaması beni sevdiğini gösteriyor.,4,filler
+3039,.,.,.,Çorbacı yerleri siliyorlar.,4,filler
+5005,1,freq,3pl,Hastanede merdivenden çıkasıları varmış.,4,item
+3046,.,.,.,Seneye bir köye inzivaya çekilmişsin.,4,filler
+3048,.,.,.,Akşamki rüzgar korkunç şekilde binayı esti.,4,filler
+5046,4,infreq,3sg,Gece kule gözetleyesi yokmuş.,4,item
+3047,.,.,.,Seyir halindeyken şarkı dinlemişsindi.,4,filler
+3018,.,.,.,Kendimi büyük sanıyormuşsun.,4,filler
+3041,.,.,.,Bu akşam memleketten sel basmış.,4,filler
+3014,.,.,.,Yarın işi bırakacağından mutsuzlarmıştı.,4,filler
+5026,3,freq,2sg,Bu akşam ödevi yapasın varmış.,4,item
+3016,.,.,.,Ceplerimizden fırladığını kıskanıyor ve heyecanlandırdım.,4,filler
+5009,1,freq,3pl,Yazın sınava giresileri yokmuş.,4,item
+3029,.,.,.,Her hafta en az bir kitap bitirirdik.,4,filler
+3033,.,.,.,Bu cinayetin failini bulmuşlar.,4,filler
+5011,1,freq,3pl,Bu yaşta sokakta kalasıları yokmuş.,4,item
+3023,.,.,.,Yarın bütün onurunu ayaklar altında ezmekteyim.,4,filler
+3038,.,.,.,Yarın aylaklık yüzünden kalemler aradım.,4,filler
+3003,.,.,.,Senin onu sevdiğini anlamışlar.,4,filler
+5013,2,infreq,3pl,Yayında kaydı dinletesileri varmış.,4,item
+3031,.,.,.,Sen her zaman başarılı oldun.,4,filler
+3007,.,.,.,Kedinin kumunu temizlerken yere dökmüşsün.,4,filler
+5017,2,infreq,3pl,Bugün ufaklığı şımartasıları varmış.,4,item
+3013,.,.,.,Dersaneye yazıldığımıza kimseye bahsetme.,4,filler
+5030,3,freq,1pl,Hafta sonu barınağa gidesimiz var.,4,item
+3036,.,.,.,Dün akşam evde fasulye ayıkladım.,4,filler
+3021,.,.,.,Yarın en parlak dimağlar göç etmeyi kararlaştırmışlar.,4,filler
+5023,2,infreq,3pl,Yarışmada ödülü bölüşesileri yokmuş.,4,item
+3043,.,.,.,Yazınki tatil planım bozuyorlar.,4,filler
+5032,3,freq,2sg,Müsabakada taraftara bakasın yokmuş.,4,item
+3011,.,.,.,Yılbaşı için tavuğu haşlamana şaşırdık.,4,filler
+5007,1,freq,3pl,Bu sabah müşteriyi arayasıları yokmuş.,4,item
+3032,.,.,.,Sırtınızı devlete dayamışsınız.,4,filler
+5044,4,infreq,1sg,Okulda hocayla dertleşesim yok.,4,item
+5022,2,infreq,3pl,Gece kule gözetleyesileri yokmuş.,5,item
+3023,.,.,.,Yarın bütün onurunu ayaklar altında ezmekteyim.,5,filler
+5037,4,infreq,1pl,Yayında kaydı dinletesimiz var.,5,item
+3042,.,.,.,Perşembe pazarındaki elmaları çürüdük.,5,filler
+3013,.,.,.,Dersaneye yazıldığımıza kimseye bahsetme.,5,filler
+5014,2,infreq,3pl,Krizde vatandaşı kazıklayasıları varmış.,5,item
+3002,.,.,.,Metroya binmekten çok yoruldular.,5,filler
+5010,1,freq,3pl,Yarın akşam antremana başlayasıları yokmuş.,5,item
+3046,.,.,.,Seneye bir köye inzivaya çekilmişsin.,5,filler
+3017,.,.,.,Senden hoşlandığımız duyulduk.,5,filler
+5033,3,freq,1pl,Yazın sınava giresimiz yok.,5,item
+3021,.,.,.,En parlak dimağlar etmeyi göç yarın kararlaştırmışlar.,5,filler
+3043,.,.,.,Yazınki tatil planım bozuyorlar.,5,filler
+5031,3,freq,3sg,Bu sabah müşteriyi arayası yokmuş.,5,item
+3037,.,.,.,Kediler koşarak çöpe saklandık.,5,filler
+5004,1,freq,3pl,Yarın akşam zanlıyı göresileri varmış.,5,item
+3045,.,.,.,Benle arkadaşlarım hafta sonu takıldım.,5,filler
+3028,.,.,.,Evin duvarlarını tablolarla süsleyin.,5,filler
+5029,3,freq,3sg,Hastanede merdivenden çıkası varmış.,5,item
+3025,.,.,.,Motorlar olay yerinden hızla uzaklaştı.,5,filler
+3005,.,.,.,Şiir okuyuşuna hayran kaldım.,5,filler
+3034,.,.,.,Yönetmenler oyuncuları birbirine benzetmişlerdi.,5,filler
+5012,1,freq,3pl,Ekranda gerçeği söyleyesileri yokmuş.,5,item
+3029,.,.,.,Her hafta en az bir kitap bitirirdik.,5,filler
+3016,.,.,.,Ceplerimizden fırladığını kıskanıyor ve heyecanlandırdım.,5,filler
+3026,.,.,.,Yarın akşam ailecek film izleyeceğiz.,5,filler
+3039,.,.,.,Çorbacı yerleri siliyorlar.,5,filler
+5025,3,freq,1sg,Partide tatlı yiyesim vardı.,5,item
+3007,.,.,.,Kedinin kumunu temizlerken yere dökmüşsün.,5,filler
+3040,.,.,.,Sabahleyin yeri düşmüşsün galiba.,5,filler
+5039,4,infreq,2pl,Yarın sabah halı silkeleyesiniz varmış.,5,item
+3047,.,.,.,Seyir halindeyken şarkı dinlemişsindi.,5,filler
+5002,1,freq,3pl,Bu akşam ödevi yapasıları varmış.,5,item
+3003,.,.,.,Senin onu sevdiğini anlamışlar.,5,filler
+3033,.,.,.,Bu cinayetin failini bulmuşlar.,5,filler
+3015,.,.,.,Kutuyu satması çok zahmetli olmakta değil.,5,filler
+5041,4,infreq,2sg,Bugün ufaklığı şımartasın varmış.,5,item
+3024,.,.,.,Koltuklar tepelerinde oturduğunu ezberledik.,5,filler
+5027,3,freq,1sg,Haftaya bisiklet alasım var.,5,item
+3022,.,.,.,Şu deveyi omuzlayabileceğini düşünmüştüktü.,5,filler
+5008,1,freq,3pl,Müsabakada taraftara bakasıları yokmuş.,5,item
+3001,.,.,.,Anneni özlediğini bilmiyordum.,5,filler
+3010,.,.,.,Bu projeyi hayata geçirdiğimizi duymuşsunuz.,5,filler
+5016,2,infreq,3pl,Mahkemede katille yüzleşesileri varmış.,5,item
+3009,.,.,.,Suçsuz olduğunuzu kanıtlamaya çalışıyorduk.,5,filler
+3041,.,.,.,Bu akşam memleketten sel basmış.,5,filler
+3012,.,.,.,Benim için bu kadar çabalaması beni sevdiğini gösteriyor.,5,filler
+5045,4,infreq,1sg,Pazarda satıcıyı oyalayasım yok.,5,item
+3006,.,.,.,Ders çalışmam herkesi hayrete düşürdü.,5,filler
+3030,.,.,.,Bu arabanın yakıtı çok ekonomik.,5,filler
+3027,.,.,.,Genellikle yemekten sonra mutfağı toplarım.,5,filler
+5020,2,infreq,3pl,Okulda hocayla dertleşesileri yokmuş.,5,item
+3031,.,.,.,Sen her zaman başarılı oldun.,5,filler
+5047,4,infreq,3sg,Yarışmada ödülü bölüşesi yokmuş.,5,item
+3004,.,.,.,Bana makarna pişireceğine söz vermiştin.,5,filler
+3048,.,.,.,Akşamki rüzgar korkunç şekilde binayı esti.,5,filler
+3032,.,.,.,Sırtınızı devlete dayamışsınız.,5,filler
+5006,1,freq,3pl,Hafta sonu barınağa gidesileri varmış.,5,item
+3020,.,.,.,Sinema etkinliğine sıkıcılaştırmamızda ısrarcısınız.,5,filler
+3011,.,.,.,Yılbaşı için tavuğu haşlamana şaşırdık.,5,filler
+5043,4,infreq,2pl,Dün akşam ayakkabı boyatasınız yokmuş.,5,item
+3038,.,.,.,Yarın aylaklık yüzünden kalemler aradım.,5,filler
+3014,.,.,.,Yarın işi bırakacağından mutsuzlarmıştı.,5,filler
+3044,.,.,.,Biz sizinle geceleri mekanlarda çıldırıyorsunuz.,5,filler
+5024,2,infreq,3pl,Görüşmede arabulucuyla uzlaşasıları yokmuş.,5,item
+3018,.,.,.,Kendimi büyük sanıyormuşsun.,5,filler
+5035,3,freq,3sg,Bu yaşta sokakta kalası yokmuş.,5,item
+3019,.,.,.,Dün gece herkesle selam verdiğimi tespitliyormuşsunuz.,5,filler
+3036,.,.,.,Dün akşam evde fasulye ayıkladım.,5,filler
+3008,.,.,.,Nişanlısıyla tanışmayı siz de çok istiyormuşsunuz.,5,filler
+5018,2,infreq,3pl,Programda seyirciyi coşturasıları varmış.,5,item
+3035,.,.,.,Yarın mahkemeye çıkarılacakmışsınız.,5,filler
+3035,.,.,.,Yarın mahkemeye çıkarılacakmışsınız.,6,filler
+5018,2,infreq,3pl,Programda seyirciyi coşturasıları varmış.,6,item
+3008,.,.,.,Nişanlısıyla tanışmayı siz de çok istiyormuşsunuz.,6,filler
+3036,.,.,.,Dün akşam evde fasulye ayıkladım.,6,filler
+3019,.,.,.,Dün gece herkesle selam verdiğimi tespitliyormuşsunuz.,6,filler
+5035,3,freq,3sg,Bu yaşta sokakta kalası yokmuş.,6,item
+3018,.,.,.,Kendimi büyük sanıyormuşsun.,6,filler
+5024,2,infreq,3pl,Görüşmede arabulucuyla uzlaşasıları yokmuş.,6,item
+3044,.,.,.,Biz sizinle geceleri mekanlarda çıldırıyorsunuz.,6,filler
+3014,.,.,.,Yarın işi bırakacağından mutsuzlarmıştı.,6,filler
+3038,.,.,.,Yarın aylaklık yüzünden kalemler aradım.,6,filler
+5043,4,infreq,2pl,Dün akşam ayakkabı boyatasınız yokmuş.,6,item
+3011,.,.,.,Yılbaşı için tavuğu haşlamana şaşırdık.,6,filler
+3020,.,.,.,Sinema etkinliğine sıkıcılaştırmamızda ısrarcısınız.,6,filler
+5006,1,freq,3pl,Hafta sonu barınağa gidesileri varmış.,6,item
+3032,.,.,.,Sırtınızı devlete dayamışsınız.,6,filler
+3048,.,.,.,Akşamki rüzgar korkunç şekilde binayı esti.,6,filler
+3004,.,.,.,Bana makarna pişireceğine söz vermiştin.,6,filler
+5047,4,infreq,3sg,Yarışmada ödülü bölüşesi yokmuş.,6,item
+3031,.,.,.,Sen her zaman başarılı oldun.,6,filler
+5020,2,infreq,3pl,Okulda hocayla dertleşesileri yokmuş.,6,item
+3027,.,.,.,Genellikle yemekten sonra mutfağı toplarım.,6,filler
+3030,.,.,.,Bu arabanın yakıtı çok ekonomik.,6,filler
+3006,.,.,.,Ders çalışmam herkesi hayrete düşürdü.,6,filler
+5045,4,infreq,1sg,Pazarda satıcıyı oyalayasım yok.,6,item
+3012,.,.,.,Benim için bu kadar çabalaması beni sevdiğini gösteriyor.,6,filler
+3041,.,.,.,Bu akşam memleketten sel basmış.,6,filler
+3009,.,.,.,Suçsuz olduğunuzu kanıtlamaya çalışıyorduk.,6,filler
+5016,2,infreq,3pl,Mahkemede katille yüzleşesileri varmış.,6,item
+3010,.,.,.,Bu projeyi hayata geçirdiğimizi duymuşsunuz.,6,filler
+3001,.,.,.,Anneni özlediğini bilmiyordum.,6,filler
+5008,1,freq,3pl,Müsabakada taraftara bakasıları yokmuş.,6,item
+3022,.,.,.,Şu deveyi omuzlayabileceğini düşünmüştüktü.,6,filler
+5027,3,freq,1sg,Haftaya bisiklet alasım var.,6,item
+3024,.,.,.,Koltuklar tepelerinde oturduğunu ezberledik.,6,filler
+5041,4,infreq,2sg,Bugün ufaklığı şımartasın varmış.,6,item
+3015,.,.,.,Kutuyu satması çok zahmetli olmakta değil.,6,filler
+3033,.,.,.,Bu cinayetin failini bulmuşlar.,6,filler
+3003,.,.,.,Senin onu sevdiğini anlamışlar.,6,filler
+5002,1,freq,3pl,Bu akşam ödevi yapasıları varmış.,6,item
+3047,.,.,.,Seyir halindeyken şarkı dinlemişsindi.,6,filler
+5039,4,infreq,2pl,Yarın sabah halı silkeleyesiniz varmış.,6,item
+3040,.,.,.,Sabahleyin yeri düşmüşsün galiba.,6,filler
+3007,.,.,.,Kedinin kumunu temizlerken yere dökmüşsün.,6,filler
+5025,3,freq,1sg,Partide tatlı yiyesim vardı.,6,item
+3039,.,.,.,Çorbacı yerleri siliyorlar.,6,filler
+3026,.,.,.,Yarın akşam ailecek film izleyeceğiz.,6,filler
+3016,.,.,.,Ceplerimizden fırladığını kıskanıyor ve heyecanlandırdım.,6,filler
+3029,.,.,.,Her hafta en az bir kitap bitirirdik.,6,filler
+5012,1,freq,3pl,Ekranda gerçeği söyleyesileri yokmuş.,6,item
+3034,.,.,.,Yönetmenler oyuncuları birbirine benzetmişlerdi.,6,filler
+3005,.,.,.,Şiir okuyuşuna hayran kaldım.,6,filler
+3025,.,.,.,Motorlar olay yerinden hızla uzaklaştı.,6,filler
+5029,3,freq,3sg,Hastanede merdivenden çıkası varmış.,6,item
+3028,.,.,.,Evin duvarlarını tablolarla süsleyin.,6,filler
+3045,.,.,.,Benle arkadaşlarım hafta sonu takıldım.,6,filler
+5004,1,freq,3pl,Yarın akşam zanlıyı göresileri varmış.,6,item
+3037,.,.,.,Kediler koşarak çöpe saklandık.,6,filler
+5031,3,freq,3sg,Bu sabah müşteriyi arayası yokmuş.,6,item
+3043,.,.,.,Yazınki tatil planım bozuyorlar.,6,filler
+3021,.,.,.,En parlak dimağlar etmeyi göç yarın kararlaştırmışlar.,6,filler
+5033,3,freq,1pl,Yazın sınava giresimiz yok.,6,item
+3017,.,.,.,Senden hoşlandığımız duyulduk.,6,filler
+3046,.,.,.,Seneye bir köye inzivaya çekilmişsin.,6,filler
+5010,1,freq,3pl,Yarın akşam antremana başlayasıları yokmuş.,6,item
+3002,.,.,.,Metroya binmekten çok yoruldular.,6,filler
+5014,2,infreq,3pl,Krizde vatandaşı kazıklayasıları varmış.,6,item
+3013,.,.,.,Dersaneye yazıldığımıza kimseye bahsetme.,6,filler
+3042,.,.,.,Perşembe pazarındaki elmaları çürüdük.,6,filler
+5037,4,infreq,1pl,Yayında kaydı dinletesimiz var.,6,item
+3023,.,.,.,Yarın bütün onurunu ayaklar altında ezmekteyim.,6,filler
+5022,2,infreq,3pl,Gece kule gözetleyesileri yokmuş.,6,item
+5041,4,infreq,2sg,Bugün ufaklığı şımartasın varmış.,7,item
+3024,.,.,.,Koltuklar tepelerinde oturduğunu ezberledik.,7,filler
+5027,3,freq,1sg,Haftaya bisiklet alasım var.,7,item
+3022,.,.,.,Şu deveyi omuzlayabileceğini düşünmüştüktü.,7,filler
+5008,1,freq,3pl,Müsabakada taraftara bakasıları yokmuş.,7,item
+3001,.,.,.,Anneni özlediğini bilmiyordum.,7,filler
+3010,.,.,.,Bu projeyi hayata geçirdiğimizi duymuşsunuz.,7,filler
+5016,2,infreq,3pl,Mahkemede katille yüzleşesileri varmış.,7,item
+3009,.,.,.,Suçsuz olduğunuzu kanıtlamaya çalışıyorduk.,7,filler
+3041,.,.,.,Bu akşam memleketten sel basmış.,7,filler
+3012,.,.,.,Benim için bu kadar çabalaması beni sevdiğini gösteriyor.,7,filler
+5045,4,infreq,1sg,Pazarda satıcıyı oyalayasım yok.,7,item
+3006,.,.,.,Ders çalışmam herkesi hayrete düşürdü.,7,filler
+3030,.,.,.,Bu arabanın yakıtı çok ekonomik.,7,filler
+3027,.,.,.,Genellikle yemekten sonra mutfağı toplarım.,7,filler
+5020,2,infreq,3pl,Okulda hocayla dertleşesileri yokmuş.,7,item
+3031,.,.,.,Sen her zaman başarılı oldun.,7,filler
+5047,4,infreq,3sg,Yarışmada ödülü bölüşesi yokmuş.,7,item
+3004,.,.,.,Bana makarna pişireceğine söz vermiştin.,7,filler
+3048,.,.,.,Akşamki rüzgar korkunç şekilde binayı esti.,7,filler
+3032,.,.,.,Sırtınızı devlete dayamışsınız.,7,filler
+5006,1,freq,3pl,Hafta sonu barınağa gidesileri varmış.,7,item
+3020,.,.,.,Sinema etkinliğine sıkıcılaştırmamızda ısrarcısınız.,7,filler
+3011,.,.,.,Yılbaşı için tavuğu haşlamana şaşırdık.,7,filler
+5043,4,infreq,2pl,Dün akşam ayakkabı boyatasınız yokmuş.,7,item
+3038,.,.,.,Yarın aylaklık yüzünden kalemler aradım.,7,filler
+3014,.,.,.,Yarın işi bırakacağından mutsuzlarmıştı.,7,filler
+3044,.,.,.,Biz sizinle geceleri mekanlarda çıldırıyorsunuz.,7,filler
+5024,2,infreq,3pl,Görüşmede arabulucuyla uzlaşasıları yokmuş.,7,item
+3018,.,.,.,Kendimi büyük sanıyormuşsun.,7,filler
+5035,3,freq,3sg,Bu yaşta sokakta kalası yokmuş.,7,item
+3019,.,.,.,Dün gece herkesle selam verdiğimi tespitliyormuşsunuz.,7,filler
+3036,.,.,.,Dün akşam evde fasulye ayıkladım.,7,filler
+3008,.,.,.,Nişanlısıyla tanışmayı siz de çok istiyormuşsunuz.,7,filler
+5018,2,infreq,3pl,Programda seyirciyi coşturasıları varmış.,7,item
+3035,.,.,.,Yarın mahkemeye çıkarılacakmışsınız.,7,filler
+5022,2,infreq,3pl,Gece kule gözetleyesileri yokmuş.,7,item
+3023,.,.,.,Yarın bütün onurunu ayaklar altında ezmekteyim.,7,filler
+5037,4,infreq,1pl,Yayında kaydı dinletesimiz var.,7,item
+3042,.,.,.,Perşembe pazarındaki elmaları çürüdük.,7,filler
+3013,.,.,.,Dersaneye yazıldığımıza kimseye bahsetme.,7,filler
+5014,2,infreq,3pl,Krizde vatandaşı kazıklayasıları varmış.,7,item
+3002,.,.,.,Metroya binmekten çok yoruldular.,7,filler
+5010,1,freq,3pl,Yarın akşam antremana başlayasıları yokmuş.,7,item
+3046,.,.,.,Seneye bir köye inzivaya çekilmişsin.,7,filler
+3017,.,.,.,Senden hoşlandığımız duyulduk.,7,filler
+5033,3,freq,1pl,Yazın sınava giresimiz yok.,7,item
+3021,.,.,.,En parlak dimağlar etmeyi göç yarın kararlaştırmışlar.,7,filler
+3043,.,.,.,Yazınki tatil planım bozuyorlar.,7,filler
+5031,3,freq,3sg,Bu sabah müşteriyi arayası yokmuş.,7,item
+3037,.,.,.,Kediler koşarak çöpe saklandık.,7,filler
+5004,1,freq,3pl,Yarın akşam zanlıyı göresileri varmış.,7,item
+3045,.,.,.,Benle arkadaşlarım hafta sonu takıldım.,7,filler
+3028,.,.,.,Evin duvarlarını tablolarla süsleyin.,7,filler
+5029,3,freq,3sg,Hastanede merdivenden çıkası varmış.,7,item
+3025,.,.,.,Motorlar olay yerinden hızla uzaklaştı.,7,filler
+3005,.,.,.,Şiir okuyuşuna hayran kaldım.,7,filler
+3034,.,.,.,Yönetmenler oyuncuları birbirine benzetmişlerdi.,7,filler
+5012,1,freq,3pl,Ekranda gerçeği söyleyesileri yokmuş.,7,item
+3029,.,.,.,Her hafta en az bir kitap bitirirdik.,7,filler
+3016,.,.,.,Ceplerimizden fırladığını kıskanıyor ve heyecanlandırdım.,7,filler
+3026,.,.,.,Yarın akşam ailecek film izleyeceğiz.,7,filler
+3039,.,.,.,Çorbacı yerleri siliyorlar.,7,filler
+5025,3,freq,1sg,Partide tatlı yiyesim vardı.,7,item
+3007,.,.,.,Kedinin kumunu temizlerken yere dökmüşsün.,7,filler
+3040,.,.,.,Sabahleyin yeri düşmüşsün galiba.,7,filler
+5039,4,infreq,2pl,Yarın sabah halı silkeleyesiniz varmış.,7,item
+3047,.,.,.,Seyir halindeyken şarkı dinlemişsindi.,7,filler
+5002,1,freq,3pl,Bu akşam ödevi yapasıları varmış.,7,item
+3003,.,.,.,Senin onu sevdiğini anlamışlar.,7,filler
+3033,.,.,.,Bu cinayetin failini bulmuşlar.,7,filler
+3015,.,.,.,Kutuyu satması çok zahmetli olmakta değil.,7,filler
+3015,.,.,.,Kutuyu satması çok zahmetli olmakta değil.,8,filler
+3033,.,.,.,Bu cinayetin failini bulmuşlar.,8,filler
+3003,.,.,.,Senin onu sevdiğini anlamışlar.,8,filler
+5002,1,freq,3pl,Bu akşam ödevi yapasıları varmış.,8,item
+3047,.,.,.,Seyir halindeyken şarkı dinlemişsindi.,8,filler
+5039,4,infreq,2pl,Yarın sabah halı silkeleyesiniz varmış.,8,item
+3040,.,.,.,Sabahleyin yeri düşmüşsün galiba.,8,filler
+3007,.,.,.,Kedinin kumunu temizlerken yere dökmüşsün.,8,filler
+5025,3,freq,1sg,Partide tatlı yiyesim vardı.,8,item
+3039,.,.,.,Çorbacı yerleri siliyorlar.,8,filler
+3026,.,.,.,Yarın akşam ailecek film izleyeceğiz.,8,filler
+3016,.,.,.,Ceplerimizden fırladığını kıskanıyor ve heyecanlandırdım.,8,filler
+3029,.,.,.,Her hafta en az bir kitap bitirirdik.,8,filler
+5012,1,freq,3pl,Ekranda gerçeği söyleyesileri yokmuş.,8,item
+3034,.,.,.,Yönetmenler oyuncuları birbirine benzetmişlerdi.,8,filler
+3005,.,.,.,Şiir okuyuşuna hayran kaldım.,8,filler
+3025,.,.,.,Motorlar olay yerinden hızla uzaklaştı.,8,filler
+5029,3,freq,3sg,Hastanede merdivenden çıkası varmış.,8,item
+3028,.,.,.,Evin duvarlarını tablolarla süsleyin.,8,filler
+3045,.,.,.,Benle arkadaşlarım hafta sonu takıldım.,8,filler
+5004,1,freq,3pl,Yarın akşam zanlıyı göresileri varmış.,8,item
+3037,.,.,.,Kediler koşarak çöpe saklandık.,8,filler
+5031,3,freq,3sg,Bu sabah müşteriyi arayası yokmuş.,8,item
+3043,.,.,.,Yazınki tatil planım bozuyorlar.,8,filler
+3021,.,.,.,En parlak dimağlar etmeyi göç yarın kararlaştırmışlar.,8,filler
+5033,3,freq,1pl,Yazın sınava giresimiz yok.,8,item
+3017,.,.,.,Senden hoşlandığımız duyulduk.,8,filler
+3046,.,.,.,Seneye bir köye inzivaya çekilmişsin.,8,filler
+5010,1,freq,3pl,Yarın akşam antremana başlayasıları yokmuş.,8,item
+3002,.,.,.,Metroya binmekten çok yoruldular.,8,filler
+5014,2,infreq,3pl,Krizde vatandaşı kazıklayasıları varmış.,8,item
+3013,.,.,.,Dersaneye yazıldığımıza kimseye bahsetme.,8,filler
+3042,.,.,.,Perşembe pazarındaki elmaları çürüdük.,8,filler
+5037,4,infreq,1pl,Yayında kaydı dinletesimiz var.,8,item
+3023,.,.,.,Yarın bütün onurunu ayaklar altında ezmekteyim.,8,filler
+5022,2,infreq,3pl,Gece kule gözetleyesileri yokmuş.,8,item
+3035,.,.,.,Yarın mahkemeye çıkarılacakmışsınız.,8,filler
+5018,2,infreq,3pl,Programda seyirciyi coşturasıları varmış.,8,item
+3008,.,.,.,Nişanlısıyla tanışmayı siz de çok istiyormuşsunuz.,8,filler
+3036,.,.,.,Dün akşam evde fasulye ayıkladım.,8,filler
+3019,.,.,.,Dün gece herkesle selam verdiğimi tespitliyormuşsunuz.,8,filler
+5035,3,freq,3sg,Bu yaşta sokakta kalası yokmuş.,8,item
+3018,.,.,.,Kendimi büyük sanıyormuşsun.,8,filler
+5024,2,infreq,3pl,Görüşmede arabulucuyla uzlaşasıları yokmuş.,8,item
+3044,.,.,.,Biz sizinle geceleri mekanlarda çıldırıyorsunuz.,8,filler
+3014,.,.,.,Yarın işi bırakacağından mutsuzlarmıştı.,8,filler
+3038,.,.,.,Yarın aylaklık yüzünden kalemler aradım.,8,filler
+5043,4,infreq,2pl,Dün akşam ayakkabı boyatasınız yokmuş.,8,item
+3011,.,.,.,Yılbaşı için tavuğu haşlamana şaşırdık.,8,filler
+3020,.,.,.,Sinema etkinliğine sıkıcılaştırmamızda ısrarcısınız.,8,filler
+5006,1,freq,3pl,Hafta sonu barınağa gidesileri varmış.,8,item
+3032,.,.,.,Sırtınızı devlete dayamışsınız.,8,filler
+3048,.,.,.,Akşamki rüzgar korkunç şekilde binayı esti.,8,filler
+3004,.,.,.,Bana makarna pişireceğine söz vermiştin.,8,filler
+5047,4,infreq,3sg,Yarışmada ödülü bölüşesi yokmuş.,8,item
+3031,.,.,.,Sen her zaman başarılı oldun.,8,filler
+5020,2,infreq,3pl,Okulda hocayla dertleşesileri yokmuş.,8,item
+3027,.,.,.,Genellikle yemekten sonra mutfağı toplarım.,8,filler
+3030,.,.,.,Bu arabanın yakıtı çok ekonomik.,8,filler
+3006,.,.,.,Ders çalışmam herkesi hayrete düşürdü.,8,filler
+5045,4,infreq,1sg,Pazarda satıcıyı oyalayasım yok.,8,item
+3012,.,.,.,Benim için bu kadar çabalaması beni sevdiğini gösteriyor.,8,filler
+3041,.,.,.,Bu akşam memleketten sel basmış.,8,filler
+3009,.,.,.,Suçsuz olduğunuzu kanıtlamaya çalışıyorduk.,8,filler
+5016,2,infreq,3pl,Mahkemede katille yüzleşesileri varmış.,8,item
+3010,.,.,.,Bu projeyi hayata geçirdiğimizi duymuşsunuz.,8,filler
+3001,.,.,.,Anneni özlediğini bilmiyordum.,8,filler
+5008,1,freq,3pl,Müsabakada taraftara bakasıları yokmuş.,8,item
+3022,.,.,.,Şu deveyi omuzlayabileceğini düşünmüştüktü.,8,filler
+5027,3,freq,1sg,Haftaya bisiklet alasım var.,8,item
+3024,.,.,.,Koltuklar tepelerinde oturduğunu ezberledik.,8,filler
+5041,4,infreq,2sg,Bugün ufaklığı şımartasın varmış.,8,item
