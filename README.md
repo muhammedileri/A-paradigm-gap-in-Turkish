@@ -1,3 +1,3 @@
-# A-paradigm-gap-in-Turkish
+# A paradigm gap in Turkish
 
 Analyses of the experimental and corpus data I collected for my master's thesis on a gap in the paradigm of -AsI desideratives in Turkish. Namely, I have found out that many speakers of Turkish do not like sentences such as "Annemlere sordum ama pikniğe gidesileri yokmuş." because they are not confident about the (un)acceptability of forms like "gidesileri" or "yapasıları", which are desiderative forms formed with the -AsI suffix and which are inflected for third person plural possessive agreement. So, Turkish speakers dislike 3PL desiderative forms and tend to avoid using them. This phenomenon is called a paradigm gap or defectivity in linguistics.
