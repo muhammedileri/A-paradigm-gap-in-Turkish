@@ -1,0 +1,126 @@
+---
+title: "A Paradigm Gap in Turkish - Corpus"
+author: "Muhammed İleri"
+date: "2/21/2022"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_knit$set(root.dir = '~/Desktop/paradigm gap data/corpus/materials')
+theme_set(theme_light())
+```
+
+```{r library, include=FALSE}
+library(tidyverse)
+library(magrittr)
+```
+
+## Corpus Data
+
+This file is a supplementary to the project **A Paradigm Gap in Turkish**. In what follows, we are plotting the frequency distributions of agreement markers depending on a given stem based on corpus data that we got from TrTenTen (via SketchEngine.eu) and TSCorpus.
+
+### istiyor+AGR(i)
+
+In this one we will plot the frequencies of the agreement suffixes co-occuring with the stem 'want.IMPF'.
+
+```{r istiyor+AGR, echo = T, results = 'hide'}
+person <- factor(c("1sg", "1pl", "2sg", "2pl", "3sg", "3pl"), levels = c("1sg", "1pl", "2sg", "2pl", "3sg", "3pl"))
+
+istemek_counts <- c(744095, 365941, 26847, 52413, 346793, 91838)
+
+istiyor_df <- tibble(person, istemek_counts)
+
+istiyor_plot <- 
+  istiyor_df %>% 
+  mutate(props = istemek_counts/sum(istemek_counts)) %>%
+  ggplot(aes(person, props, fill = person)) + 
+  geom_bar(stat = "identity") +
+  scale_y_continuous(labels=scales::percent) +
+  xlab("person-number") +
+  ylab("Relative Frequency") +
+  ggtitle("istiyor + AGR      'want.IMPF' ") +
+  guides(fill="none")
+
+istiyor_plot
+```
+
+### V+AsI+AGR(i)
+
+The plots in the grid in this part represents the frequency distribution of agreement markers attached to the verbal roots al 'buy', git 'go', gör 'see', yap 'do'.
+
+```{r pressure, echo = T, results = 'hide'}
+top4_desiderative <- read_csv("top4verbs_desiderative_freqs.csv")
+
+relative_frequency_table <- 
+  top4_desiderative %>% 
+  group_by(person) %>%
+  summarize(n_occurence = sum(count)) %>% 
+  mutate(relative_frequencies = (n_occurence/sum(n_occurence)))
+
+V_AsI_AGR <- 
+  top4_desiderative %>%
+  mutate(person = factor(person, levels = c("1sg", "1pl", "2sg", "2pl", "3sg", "3pl")),
+         verb = factor(verb)) %>%
+  group_by(verb) %>%
+  mutate(proportion = count/sum(count)) %>%
+  ggplot(aes(person, proportion)) +
+  geom_bar(stat = "identity") +
+  scale_y_continuous(labels=scales::percent) +
+  facet_wrap(~verb) +
+  ylab("Relative Frequency") +
+  xlab("person-number") +
+  guides(fill="none")
+```
+
+### Possessives
+
+Template-final counts of possessive agreement suffixes taken from the TS Corpus.
+
+```{r possessives, echo = T, results = 'hide'}
+possessives <- c("P1sg", "P1pl", "P2sg", "P2pl", "P3sg", "P3pl")
+
+template_final_counts <- c(969591, 1012695, 126734, 454622, 29565419, 652394)
+
+template_final_poss_freq <- tibble(possessives, template_final_counts)
+
+template_final_poss_relative_freq_plot <- 
+  template_final_poss_freq %>%
+  mutate(possessives = factor(possessives, levels = c("P1sg", "P1pl", "P2sg", "P2pl", "P3sg", "P3pl"))) %>%
+  mutate(relative_freqs = template_final_counts/sum(template_final_counts)) %>%
+  ggplot(aes(possessives, relative_freqs, fill = possessives)) +
+  geom_bar(stat = "identity") +
+  scale_y_continuous(breaks=seq(0.1, 0.9, by=0.2), labels=scales::percent) +
+  ggtitle("Relative Word-Final Frequencies of Possessive Suffixes") +
+  ylab("Relative Frequency") +
+  xlab("Possessive Suffixes") +
+  guides(fill="none")
+
+template_final_poss_relative_freq_plot
+
+```
+
+### -mA Nominalization
+
+The plot below illustrates the relative frequency distribution of possessive agreement suffixes when given a stem endign with the nominalizer suffix -mA. The frequencies are restricted to words which have no case marking, hence which are ending in possessives.
+
+```{r mA, echo = T, results = 'hide'}
+person <- factor(c("1sg", "1pl", "2sg", "2pl", "3sg", "3pl"), levels = c("1sg", "1pl", "2sg", "2pl", "3sg", "3pl"))
+
+freqs_ma <- c(91125,78437,14817,58381,1327200,319990)
+
+ma_nom_df <- tibble(person, freqs_ma)
+
+ma_nom_plot <- 
+  ma_nom_df %>%
+  mutate(props = freqs_ma/sum(freqs_ma)) %>%
+  ggplot(aes(person, props, fill = person)) +
+  geom_bar(stat = "identity") +
+  scale_y_continuous(breaks=seq(0.1, 0.7, by=0.2), labels=scales::percent) +
+  ggtitle("Relative Frequencies of Poss. Suffixes in NOM -mA clauses") +
+  ylab("Relative Frequency") +
+  xlab("Person-Number") +
+  guides(fill="none")
+
+ma_nom_plot
+```
